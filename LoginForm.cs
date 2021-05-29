@@ -22,8 +22,8 @@ namespace MapApp
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string loginUser = loginBox.Text;
-            string pwdUser = pwdBox.Text;
+            string loginUser = pwdBox.Text;
+            string pwdUser = loginBox.Text;
             string type = string.Empty;
             string name = string.Empty;
 

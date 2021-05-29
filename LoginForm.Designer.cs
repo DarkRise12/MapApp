@@ -31,8 +31,8 @@ namespace MapApp
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pwdBox = new System.Windows.Forms.TextBox();
             this.loginBox = new System.Windows.Forms.TextBox();
+            this.pwdBox = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.loginInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -55,20 +55,20 @@ namespace MapApp
             this.label2.TabIndex = 1;
             this.label2.Text = "Пароль";
             // 
-            // pwdBox
-            // 
-            this.pwdBox.Location = new System.Drawing.Point(82, 95);
-            this.pwdBox.Name = "pwdBox";
-            this.pwdBox.Size = new System.Drawing.Size(213, 20);
-            this.pwdBox.TabIndex = 2;
-            this.pwdBox.UseSystemPasswordChar = true;
-            // 
             // loginBox
             // 
             this.loginBox.Location = new System.Drawing.Point(82, 53);
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(213, 20);
-            this.loginBox.TabIndex = 3;
+            this.loginBox.TabIndex = 2;
+            // 
+            // pwdBox
+            // 
+            this.pwdBox.Location = new System.Drawing.Point(82, 95);
+            this.pwdBox.Name = "pwdBox";
+            this.pwdBox.Size = new System.Drawing.Size(213, 20);
+            this.pwdBox.TabIndex = 3;
+            this.pwdBox.UseSystemPasswordChar = true;
             // 
             // buttonLogin
             // 
@@ -99,8 +99,8 @@ namespace MapApp
             this.ClientSize = new System.Drawing.Size(344, 286);
             this.Controls.Add(this.loginInfo);
             this.Controls.Add(this.buttonLogin);
-            this.Controls.Add(this.loginBox);
             this.Controls.Add(this.pwdBox);
+            this.Controls.Add(this.loginBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -116,8 +116,8 @@ namespace MapApp
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox pwdBox;
         private System.Windows.Forms.TextBox loginBox;
+        private System.Windows.Forms.TextBox pwdBox;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label loginInfo;
     }

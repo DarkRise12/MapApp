@@ -33,6 +33,11 @@ namespace MapApp
             this.label2 = new System.Windows.Forms.Label();
             this.labelType = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonMap = new System.Windows.Forms.Button();
+            this.buttonDBClient = new System.Windows.Forms.Button();
+            this.buttonDBWorkers = new System.Windows.Forms.Button();
+            this.buttonUserCreate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,15 +74,69 @@ namespace MapApp
             this.labelName.Size = new System.Drawing.Size(0, 13);
             this.labelName.TabIndex = 3;
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(210, 517);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(128, 29);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "Выход из аккаунта";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // buttonMap
+            // 
+            this.buttonMap.Location = new System.Drawing.Point(15, 76);
+            this.buttonMap.Name = "buttonMap";
+            this.buttonMap.Size = new System.Drawing.Size(323, 49);
+            this.buttonMap.TabIndex = 6;
+            this.buttonMap.Text = "Создать карту";
+            this.buttonMap.UseVisualStyleBackColor = true;
+            // 
+            // buttonDBClient
+            // 
+            this.buttonDBClient.Location = new System.Drawing.Point(15, 131);
+            this.buttonDBClient.Name = "buttonDBClient";
+            this.buttonDBClient.Size = new System.Drawing.Size(323, 49);
+            this.buttonDBClient.TabIndex = 7;
+            this.buttonDBClient.Text = "Просмотр БД клиентов";
+            this.buttonDBClient.UseVisualStyleBackColor = true;
+            // 
+            // buttonDBWorkers
+            // 
+            this.buttonDBWorkers.Location = new System.Drawing.Point(15, 186);
+            this.buttonDBWorkers.Name = "buttonDBWorkers";
+            this.buttonDBWorkers.Size = new System.Drawing.Size(323, 49);
+            this.buttonDBWorkers.TabIndex = 8;
+            this.buttonDBWorkers.Text = "Просмотр БД сотрудников";
+            this.buttonDBWorkers.UseVisualStyleBackColor = true;
+            this.buttonDBWorkers.Click += new System.EventHandler(this.buttonDBWorkers_Click);
+            // 
+            // buttonUserCreate
+            // 
+            this.buttonUserCreate.Location = new System.Drawing.Point(15, 241);
+            this.buttonUserCreate.Name = "buttonUserCreate";
+            this.buttonUserCreate.Size = new System.Drawing.Size(323, 49);
+            this.buttonUserCreate.TabIndex = 9;
+            this.buttonUserCreate.Text = "Создать пользователя";
+            this.buttonUserCreate.UseVisualStyleBackColor = true;
+            this.buttonUserCreate.Click += new System.EventHandler(this.buttonUserCreate_Click);
+            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 568);
+            this.ClientSize = new System.Drawing.Size(350, 568);
+            this.Controls.Add(this.buttonUserCreate);
+            this.Controls.Add(this.buttonDBWorkers);
+            this.Controls.Add(this.buttonDBClient);
+            this.Controls.Add(this.buttonMap);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "MainWindowForm";
             this.Text = "Главное окно";
             this.ResumeLayout(false);
@@ -91,5 +150,10 @@ namespace MapApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonMap;
+        private System.Windows.Forms.Button buttonDBClient;
+        private System.Windows.Forms.Button buttonDBWorkers;
+        private System.Windows.Forms.Button buttonUserCreate;
     }
 }
