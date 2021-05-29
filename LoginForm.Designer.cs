@@ -61,6 +61,7 @@ namespace MapApp
             this.pwdBox.Name = "pwdBox";
             this.pwdBox.Size = new System.Drawing.Size(213, 20);
             this.pwdBox.TabIndex = 2;
+            this.pwdBox.UseSystemPasswordChar = true;
             // 
             // loginBox
             // 

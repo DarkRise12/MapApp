@@ -41,9 +41,11 @@ namespace MapApp
 
             if (table.Rows.Count == 1)
             {
+                UserData.UserType = table.Rows[0].Field<string>(3);
+                UserData.UserName = table.Rows[0].Field<string>(4);
                 loginInfo.Hide();
                 this.Hide();
-                MainForm mainForm = new MainForm();
+                MainWindowForm mainForm = new MainWindowForm();
                 mainForm.Show();
             }
             else
