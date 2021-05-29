@@ -34,6 +34,7 @@ namespace MapApp
             this.pwdBox = new System.Windows.Forms.TextBox();
             this.loginBox = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
+            this.loginInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -78,11 +79,24 @@ namespace MapApp
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
+            // loginInfo
+            // 
+            this.loginInfo.AutoSize = true;
+            this.loginInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginInfo.ForeColor = System.Drawing.Color.Red;
+            this.loginInfo.Location = new System.Drawing.Point(12, 219);
+            this.loginInfo.Name = "loginInfo";
+            this.loginInfo.Size = new System.Drawing.Size(321, 16);
+            this.loginInfo.TabIndex = 5;
+            this.loginInfo.Text = "Ошибка входа. Проверьте логин и пароль.";
+            this.loginInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 286);
+            this.Controls.Add(this.loginInfo);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.loginBox);
             this.Controls.Add(this.pwdBox);
@@ -104,6 +118,7 @@ namespace MapApp
         private System.Windows.Forms.TextBox pwdBox;
         private System.Windows.Forms.TextBox loginBox;
         private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Label loginInfo;
     }
 }
 
