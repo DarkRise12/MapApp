@@ -44,7 +44,8 @@ namespace MapApp
 
         private void buttonDBWorkers_Click(object sender, EventArgs e)
         {
-
+            WorkersDBForm workersDBForm = new WorkersDBForm();
+            workersDBForm.Show();
         }
     }
 }

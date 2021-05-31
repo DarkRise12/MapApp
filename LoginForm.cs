@@ -38,15 +38,14 @@ namespace MapApp
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-
-            if (table.Rows.Count == 1)
+            if(table.Rows.Count == 1)
             {
-                UserData.UserType = table.Rows[0].Field<string>(3);
-                UserData.UserName = table.Rows[0].Field<string>(4);
                 loginInfo.Hide();
                 this.Hide();
-                MainWindowForm mainForm = new MainWindowForm();
-                mainForm.Show();
+                UserData.UserType = table.Rows[0].Field<string>(3);
+                UserData.UserName = table.Rows[0].Field<string>(4);
+                MainWindowForm mainWindowForm = new MainWindowForm();
+                mainWindowForm.Show();
             }
             else
             {

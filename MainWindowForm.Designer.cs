@@ -108,7 +108,7 @@ namespace MapApp
             this.buttonDBWorkers.Name = "buttonDBWorkers";
             this.buttonDBWorkers.Size = new System.Drawing.Size(323, 49);
             this.buttonDBWorkers.TabIndex = 8;
-            this.buttonDBWorkers.Text = "Просмотр БД сотрудников";
+            this.buttonDBWorkers.Text = "Просмотр БД пользователей";
             this.buttonDBWorkers.UseVisualStyleBackColor = true;
             this.buttonDBWorkers.Click += new System.EventHandler(this.buttonDBWorkers_Click);
             // 
