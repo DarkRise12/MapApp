@@ -92,6 +92,7 @@ namespace MapApp
             this.buttonMap.TabIndex = 6;
             this.buttonMap.Text = "Создать карту";
             this.buttonMap.UseVisualStyleBackColor = true;
+            this.buttonMap.Click += new System.EventHandler(this.buttonMap_Click);
             // 
             // buttonDBClient
             // 

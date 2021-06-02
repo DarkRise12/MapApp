@@ -1,4 +1,5 @@
 ﻿using MapApp.DBFolder;
+using MapApp.MapFolder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +47,21 @@ namespace MapApp
         {
             WorkersDBForm workersDBForm = new WorkersDBForm();
             workersDBForm.Show();
+        }
+
+        private void buttonMap_Click(object sender, EventArgs e)
+        {
+            GMap.NET.PointLatLng pointNull = new GMap.NET.PointLatLng(double.NaN, double.NaN);
+            MapInfo.City = null;
+            MapInfo.CityPoint = pointNull;
+            MapInfo.Contact = null;
+            MapInfo.FileName = null;
+            MapInfo.Radius = 0;
+            MapInfo.Amount = 0;
+            MapInfo.Name = null;
+
+            MapInitForm mapInitForm = new MapInitForm();
+            mapInitForm.Show();
         }
     }
 }
