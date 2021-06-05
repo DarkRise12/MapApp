@@ -163,7 +163,9 @@ namespace MapApp
         {
             MapInfo.Name = textBox3.Text;
             MapInfo.Contact = textBox4.Text;
-
+            Map map = new Map();
+            map.Show();
+            this.Close();
         }
     }
 }
