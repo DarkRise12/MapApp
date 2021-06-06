@@ -63,5 +63,10 @@ namespace MapApp
             MapInitForm mapInitForm = new MapInitForm();
             mapInitForm.Show();
         }
+
+        private void buttonDBClient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -102,6 +102,7 @@ namespace MapApp
             this.buttonDBClient.TabIndex = 7;
             this.buttonDBClient.Text = "Просмотр БД клиентов";
             this.buttonDBClient.UseVisualStyleBackColor = true;
+            this.buttonDBClient.Click += new System.EventHandler(this.buttonDBClient_Click);
             // 
             // buttonDBWorkers
             // 

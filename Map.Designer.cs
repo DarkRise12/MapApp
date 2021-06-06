@@ -30,10 +30,11 @@ namespace MapApp
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Номер = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SightName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Долгота = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Рейтинг = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kinds = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,40 +49,55 @@ namespace MapApp
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Номер,
             this.SightName,
             this.Lat,
-            this.Долгота,
-            this.Рейтинг,
+            this.Lng,
+            this.Rate,
             this.Kinds});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(375, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(498, 474);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Номер
+            // 
+            this.Номер.HeaderText = "Id";
+            this.Номер.Name = "Номер";
+            this.Номер.ReadOnly = true;
             // 
             // SightName
             // 
             this.SightName.HeaderText = "Название";
             this.SightName.Name = "SightName";
+            this.SightName.ReadOnly = true;
             // 
             // Lat
             // 
             this.Lat.HeaderText = "Широта";
             this.Lat.Name = "Lat";
+            this.Lat.ReadOnly = true;
             // 
-            // Долгота
+            // Lng
             // 
-            this.Долгота.HeaderText = "Lng";
-            this.Долгота.Name = "Долгота";
+            this.Lng.HeaderText = "Долгота";
+            this.Lng.Name = "Lng";
+            this.Lng.ReadOnly = true;
             // 
-            // Рейтинг
+            // Rate
             // 
-            this.Рейтинг.HeaderText = "Rate";
-            this.Рейтинг.Name = "Рейтинг";
+            this.Rate.HeaderText = "Рейтинг";
+            this.Rate.Name = "Rate";
+            this.Rate.ReadOnly = true;
             // 
             // Kinds
             // 
             this.Kinds.HeaderText = "Тип объекта";
             this.Kinds.Name = "Kinds";
+            this.Kinds.ReadOnly = true;
             // 
             // gMapControl1
             // 
@@ -117,6 +133,7 @@ namespace MapApp
             this.button1.TabIndex = 3;
             this.button1.Text = "Удалить точку";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -126,6 +143,7 @@ namespace MapApp
             this.button2.TabIndex = 4;
             this.button2.Text = "Добавить точку";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -135,6 +153,7 @@ namespace MapApp
             this.button3.TabIndex = 5;
             this.button3.Text = "Обновить точки";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -142,8 +161,9 @@ namespace MapApp
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(143, 42);
             this.button4.TabIndex = 6;
-            this.button4.Text = "Сохранить точки";
+            this.button4.Text = "Сохранить точки и записать в БД";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -153,6 +173,7 @@ namespace MapApp
             this.button5.TabIndex = 7;
             this.button5.Text = "Распечатать";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Map
             // 
@@ -178,15 +199,16 @@ namespace MapApp
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SightName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Долгота;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Рейтинг;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kinds;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Номер;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SightName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kinds;
     }
 }
