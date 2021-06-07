@@ -31,14 +31,15 @@ namespace MapApp
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM users WHERE `login` = @lU AND `pwd` = @pU", db.getCon());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM users WHERE `login` = @lU", db.getCon());
             command.Parameters.AddWithValue("@lU", loginUser);
-            command.Parameters.AddWithValue("@pU", pwdUser);
-
+            //command.Parameters.AddWithValue("@pU", Convert.ToBase64String(hashBytes));
+            
             adapter.SelectCommand = command;
             adapter.Fill(table);
+            PasswordHash hash = new PasswordHash(Convert.FromBase64String(table.Rows[0].Field<string>(2)));
 
-            if(table.Rows.Count == 1)
+            if (table.Rows.Count == 1 && hash.Verify(pwdUser))
             {
                 loginInfo.Hide();
                 this.Hide();

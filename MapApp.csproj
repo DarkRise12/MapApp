@@ -200,6 +200,7 @@
     <Compile Include="MapOpen.Designer.cs">
       <DependentUpon>MapOpen.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHash.cs" />
     <Compile Include="PointAdd.cs">
       <SubType>Form</SubType>
     </Compile>

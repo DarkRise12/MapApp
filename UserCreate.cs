@@ -40,10 +40,13 @@ namespace MapApp
             if (isUserExist())
                 return;
 
+            PasswordHash hash = new PasswordHash(textBoxPwd.Text);
+            byte[] hashBytes = hash.ToArray();
+
             DB db = new DB();
             MySqlCommand command = new MySqlCommand("INSERT INTO `users`(`login`, `pwd`, `type`, `name`) VALUES (@login, @pwd, @type, @name)", db.getCon());
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = textBoxLogin.Text;
-            command.Parameters.Add("@pwd", MySqlDbType.VarChar).Value = textBoxPwd.Text;
+            command.Parameters.Add("@pwd", MySqlDbType.VarChar).Value = Convert.ToBase64String(hashBytes);
             command.Parameters.Add("@type", MySqlDbType.VarChar).Value = comboBoxType.SelectedItem;
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = textBoxName.Text;
 
