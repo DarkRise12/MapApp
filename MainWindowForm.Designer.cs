@@ -38,6 +38,7 @@ namespace MapApp
             this.buttonDBClient = new System.Windows.Forms.Button();
             this.buttonDBWorkers = new System.Windows.Forms.Button();
             this.buttonUserCreate = new System.Windows.Forms.Button();
+            this.buttonOpenMap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +117,7 @@ namespace MapApp
             // 
             // buttonUserCreate
             // 
-            this.buttonUserCreate.Location = new System.Drawing.Point(15, 241);
+            this.buttonUserCreate.Location = new System.Drawing.Point(15, 296);
             this.buttonUserCreate.Name = "buttonUserCreate";
             this.buttonUserCreate.Size = new System.Drawing.Size(323, 49);
             this.buttonUserCreate.TabIndex = 9;
@@ -124,11 +125,22 @@ namespace MapApp
             this.buttonUserCreate.UseVisualStyleBackColor = true;
             this.buttonUserCreate.Click += new System.EventHandler(this.buttonUserCreate_Click);
             // 
+            // buttonOpenMap
+            // 
+            this.buttonOpenMap.Location = new System.Drawing.Point(15, 241);
+            this.buttonOpenMap.Name = "buttonOpenMap";
+            this.buttonOpenMap.Size = new System.Drawing.Size(323, 49);
+            this.buttonOpenMap.TabIndex = 10;
+            this.buttonOpenMap.Text = "Открыть карту";
+            this.buttonOpenMap.UseVisualStyleBackColor = true;
+            this.buttonOpenMap.Click += new System.EventHandler(this.buttonOpenMap_Click);
+            // 
             // MainWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 568);
+            this.Controls.Add(this.buttonOpenMap);
             this.Controls.Add(this.buttonUserCreate);
             this.Controls.Add(this.buttonDBWorkers);
             this.Controls.Add(this.buttonDBClient);
@@ -157,5 +169,6 @@ namespace MapApp
         private System.Windows.Forms.Button buttonDBClient;
         private System.Windows.Forms.Button buttonDBWorkers;
         private System.Windows.Forms.Button buttonUserCreate;
+        private System.Windows.Forms.Button buttonOpenMap;
     }
 }

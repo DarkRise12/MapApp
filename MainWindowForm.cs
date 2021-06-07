@@ -21,7 +21,10 @@ namespace MapApp
             InitializeComponent();
             labelType.Text = Type = UserData.UserType;
             labelName.Text = Name = UserData.UserName;
-
+            if(UserData.UserType != "Администратор")
+            {
+                buttonUserCreate.Hide();
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -66,7 +69,14 @@ namespace MapApp
 
         private void buttonDBClient_Click(object sender, EventArgs e)
         {
+            ClientsDBForm clientsDBForm = new ClientsDBForm();
+            clientsDBForm.Show();
+        }
 
+        private void buttonOpenMap_Click(object sender, EventArgs e)
+        {
+            MapOpen mapOpen = new MapOpen();
+            mapOpen.Show();
         }
     }
 }

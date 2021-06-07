@@ -113,11 +113,11 @@ namespace MapApp
         {
             Directory.CreateDirectory(@"C:\Users\" + Environment.UserName + @"\Documents\MapPoints\");
             string filename = @"C:\Users\" + Environment.UserName + @"\Documents\MapPoints\" + MapInfo.Name + " " + MapInfo.City + " " + DateTime.Now.ToString("dd-MM-yyyy H-mm") + ".txt";
-            string text = "Сотрудник: \n" + UserData.UserName + "\nКлиент: \n" + MapInfo.Name + "\nКонтактные данные:\n" + MapInfo.Contact + "\nГород:\n" + MapInfo.City +  "\nКоличество точек:\n" + MapInfo.Amount + "\nТочки:\n";
+            string text = "Сотрудник: \n" + UserData.UserName + "\nКлиент: \n" + MapInfo.Name + "\nКонтактные данные:\n" + MapInfo.Contact + "\nГород:\n" + MapInfo.City + "\nНачальные координаты:\n" + MapInfo.CityPoint.Lat.ToString() + "|" + MapInfo.CityPoint.Lng.ToString() + "\nКоличество точек:\n" + MapInfo.Amount + "\nТочки:\n";
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
-                text += dataGridView1.Rows[i].Cells[0].Value.ToString() + " | " + dataGridView1.Rows[i].Cells[1].Value.ToString() + " | " + dataGridView1.Rows[i].Cells[2].Value.ToString() + 
-                    " | " + dataGridView1.Rows[i].Cells[3].Value.ToString() + " | " + dataGridView1.Rows[i].Cells[4].Value.ToString() + " | " + dataGridView1.Rows[i].Cells[5].Value.ToString();
+                text += dataGridView1.Rows[i].Cells[0].Value.ToString() + "/" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "/" + dataGridView1.Rows[i].Cells[2].Value.ToString() + 
+                    "/" + dataGridView1.Rows[i].Cells[3].Value.ToString() + "/" + dataGridView1.Rows[i].Cells[4].Value.ToString() + "/" + dataGridView1.Rows[i].Cells[5].Value.ToString();
                 text += "\n";
             }
 
